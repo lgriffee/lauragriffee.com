@@ -16,7 +16,7 @@ function App() {
           </p>
 
           <p className="intro__links">
-            <a title="LinkedIn" href="https://linkedin.com/in/laura-griffee/">LinkedIn</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a title="GitHub" href="https://github.com/lgriffee/">GitHub</a>
+            <a title="LinkedIn" href="https://linkedin.com/in/laura-griffee/" target="_blank">LinkedIn</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a title="GitHub" href="https://github.com/lgriffee/" target="_blank">GitHub</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a title="InVision Talks" href="https://www.invisionapp.com/talks/designsystemsuccess" target="_blank">InVision Talks</a>
           </p>
 
         </section>

@@ -77,7 +77,7 @@ footer {
 }
 
 .intro__name {
-  margin: 0 0 1rem 0;
+  margin: 0 0 2rem 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 5.8rem;
 }
@@ -109,6 +109,16 @@ footer {
 *
 */
 
+/* Desktop
+   ========================================================================== */
+
+@media only screen and (min-width: 1200px){
+  .intro {
+    width: 49.5rem;
+  }
+
+}
+
 /* Tablet
    ========================================================================== */
 
@@ -119,34 +129,29 @@ footer {
 
 /* Mobile
    ========================================================================== */
+   @media only screen and (max-width: 671px) {
 
-@media only screen and (max-width: 671px) {
+     .intro {
+       margin: 0;
+       width: 100%;
+     }
+
+     .intro__name {
+       font-size: 3.5rem;
+     }
+   }
+
+@media only screen and (min-width: 400px) and (max-width: 671px) {
+
+  main {
+    padding: 2rem 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 399px) {
 
   main {
     padding: 2rem 1rem 0;
   }
-
-  .intro {
-    margin: 0;
-    width: 100%;
-  }
-
-  .intro__name {
-    font-size: 3.5rem;
-  }
-
-  .intro__about {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0 0 1.5rem 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-
-  .intro__links {
-    margin: 0 0 1rem 0;
-    font-size: 1rem;
-
-  }
-
 
 }
