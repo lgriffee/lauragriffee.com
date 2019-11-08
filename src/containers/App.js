@@ -12,7 +12,7 @@ function App() {
           </header>
 
           <p className="intro__about">
-            I’m a UI/UX Developer skilled at user experience design (wireframing, prototyping, and testing), interface design, and front-end development. I love ensuring designs deliver value to users and that development delivers on that vision. I get excited about maintaining design systems, building products end-to-end, and bridging the gap between design and engineering.
+            I’m a UI/UX Developer skilled at wireframing, prototyping, interface design, and front-end development. I love ensuring designs deliver value to users and that development delivers on that vision. I get excited about maintaining design systems, building products end-to-end, and bridging the gap between design and engineering.
           </p>
 
           <p className="intro__links">
