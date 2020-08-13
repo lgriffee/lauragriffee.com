@@ -12,7 +12,7 @@ function App() {
           </header>
 
           <p className="intro__about">
-            I’m a front-end designer skilled at wireframing, prototyping, interface design, and front-end development. I love ensuring designs deliver value to users and that development delivers on that vision. I get excited about creating and maintaining design systems, building products end-to-end, and bridging the design/dev gap.
+            I’m a design engineer skilled at wireframing, prototyping, interface design, and front-end development. I love ensuring designs deliver value to users and that development delivers on that vision. I get excited about creating and maintaining design systems, building products end-to-end, and facilitating better collaboration between designers and engineers.
           </p>
 
           <p className="intro__links">
