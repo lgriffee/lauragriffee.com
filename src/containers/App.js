@@ -25,7 +25,7 @@ function App() {
             <a title="GitHub" href="https://github.com/lgriffee/" target="_blank" rel="noopener noreferrer">
               <GitHubLogo/>
             </a>
-            <a title="Dribble" href="https://dribbble.com/laura-griffee" target="_blank" rel="noopener noreferrer">
+            <a title="Dribbble" href="https://dribbble.com/laura-griffee" target="_blank" rel="noopener noreferrer">
               <DribbbleLogo/>
             </a>
           </p>
