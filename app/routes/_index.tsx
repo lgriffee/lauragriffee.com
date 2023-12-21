@@ -1,4 +1,8 @@
-import type { MetaFunction } from "@remix-run/node";
+import type {MetaFunction} from '@remix-run/node';
+import type {LinksFunction} from '@remix-run/node';
+import styles from '../styles/shared.css';
+
+export const links: LinksFunction = () => [{rel: 'stylesheet', href: styles}];
 
 const experienceStartDate = new Date('2019-02-01T00:00:00');
 const currentDate = new Date();
@@ -8,14 +12,17 @@ const experienceYears = Math.floor(yearsDifference);
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Laura Griffee" },
-    { name: "description", content: `Front-end developer and interface designer with ${experienceYears}+ years of experience building design systems for global non-profit and tech companies.` },
+    {title: 'Laura Griffee'},
+    {
+      name: 'description',
+      content: `Front-end developer and interface designer with ${experienceYears}+ years of experience building design systems for global non-profit and tech companies.`,
+    },
   ];
 };
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div style={{fontFamily: 'system-ui, sans-serif', lineHeight: '1.8'}}>
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
