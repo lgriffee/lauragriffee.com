@@ -1,9 +1,15 @@
 import type { MetaFunction } from "@remix-run/node";
 
+const experienceStartDate = new Date('2019-02-01T00:00:00');
+const currentDate = new Date();
+const timeDifference = currentDate.getTime() - experienceStartDate.getTime();
+const yearsDifference = timeDifference / (1000 * 3600 * 24 * 365.25);
+const experienceYears = Math.floor(yearsDifference);
+
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Laura Griffee" },
+    { name: "description", content: `Front-end developer and interface designer with ${experienceYears}+ years of experience building design systems for global non-profit and tech companies.` },
   ];
 };
 
