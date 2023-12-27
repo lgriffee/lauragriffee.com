@@ -1,5 +1,10 @@
+import {NavLink} from '@remix-run/react';
+
 import type {MetaFunction} from '@remix-run/node';
 import type {LinksFunction} from '@remix-run/node';
+
+import {GriffeeLogo} from '../components/icons';
+
 import styles from '../styles/shared.css';
 
 export const links: LinksFunction = () => [{rel: 'stylesheet', href: styles}];
@@ -22,33 +27,62 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{fontFamily: 'system-ui, sans-serif', lineHeight: '1.8'}}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <>
+      <header>
+        <nav className="top-bar-nav">
+          <div className="top-bar-nav-logo">
+            <NavLink to="/">
+              <GriffeeLogo className="griffee-logo" />
+            </NavLink>
+            <NavLink to="/">Laura Griffee</NavLink>
+          </div>
+          <div className="top-bar-nav-links">
+            <NavLink
+              to="/"
+              className={({isActive, isPending}) =>
+                isPending
+                  ? 'top-bar-nav-link-pending'
+                  : isActive
+                    ? 'top-bar-nav-link-active'
+                    : ''
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({isActive, isPending}) =>
+                isPending
+                  ? 'top-bar-nav-link-pending'
+                  : isActive
+                    ? 'top-bar-nav-link-active'
+                    : ''
+              }
+            >
+              About
+            </NavLink>
+
+            <NavLink
+              to="/work"
+              className={({isActive, isPending}) =>
+                isPending
+                  ? 'top-bar-nav-link-pending'
+                  : isActive
+                    ? 'top-bar-nav-link-active'
+                    : ''
+              }
+            >
+              Work
+            </NavLink>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section></section>
+      </main>
+      <footer>
+        <p>Designed and built by Laura Griffee using Remix, Open Props</p>
+      </footer>
+    </>
   );
 }
