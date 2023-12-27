@@ -1,38 +1,13 @@
-# Welcome to Remix!
+# lauragriffee.com
 
-- [Remix Docs](https://remix.run/docs)
+This project is a React app I built for my personal portfolio website.
 
-## Development
+## Built With
 
-From your terminal:
-
-```sh
-npm run dev
-```
-
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+- [Remix](https://remix.run/) - Bootstrapped the project
+- [Open Props](https://open-props.style/) - CSS framework/design system
+- [PostCSS](https://postcss.org/) - (Plugins: [`postcss-custom-media`](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media) and [`postcss-global-data`](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-global-data), needed for Open Props media queries)
+- [SVGR](https://react-svgr.com/) - Transforms SVG into React components
+- [Typescript](https://www.typescriptlang.org/) - JavaScript with syntax For types
+- [Prettier](https://prettier.io/) - Opinionated code formatter
+- [ESLint](https://eslint.org/) - Linting utility for JavaScript and JSX
