@@ -1,0 +1,54 @@
+@import 'open-props/style';
+@import 'open-props/normalize';
+@import 'open-props/buttons';
+
+:root {
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.top-bar-nav {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 24px;
+  background-color: var(--gray-0);
+
+  @media (--xl-n-above) {
+    background-color: var(--gray-10);
+  }
+}
+
+.top-bar-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--size-3);
+}
+
+.griffee-logo {
+  height: var(--size-7);
+  width: auto;
+}
+
+.top-bar-nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4);
+}
+
+.top-bar-nav-link-active {
+  color: var(--green-10);
+  padding: 8px;
+}
+
+.top-bar-nav-link-pending {
+  color: var(--gray-10);
+  padding: 8px;
+}
+
+footer {
+}
