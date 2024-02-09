@@ -3,7 +3,7 @@ import {NavLink} from '@remix-run/react';
 import type {MetaFunction} from '@remix-run/node';
 import type {LinksFunction} from '@remix-run/node';
 
-import {GriffeeLogo} from '../components/icons';
+import {GriffeeLogo, Menu01} from '../components/icons';
 
 import styles from '../styles/shared.css';
 
@@ -29,22 +29,28 @@ export default function Index() {
   return (
     <>
       <header>
+        <div className="backdrop">
+          <nav className="menu"></nav>
+        </div>
         <nav className="top-bar-nav">
-          <div className="top-bar-nav-logo">
+          <div className="brand">
             <NavLink to="/">
-              <GriffeeLogo className="griffee-logo" />
+              <GriffeeLogo className="brand_logo" />
             </NavLink>
-            <NavLink to="/">Laura Griffee</NavLink>
+            <NavLink to="/" className="brand_name">
+              Laura Griffee
+            </NavLink>
           </div>
-          <div className="top-bar-nav-links">
+          <button className="menu_button">
+            <div>
+              <Menu01 className="menu_icon" />
+            </div>
+          </button>
+          <div className="links">
             <NavLink
               to="/"
               className={({isActive, isPending}) =>
-                isPending
-                  ? 'top-bar-nav-link-pending'
-                  : isActive
-                    ? 'top-bar-nav-link-active'
-                    : ''
+                isPending ? 'link--pending' : isActive ? 'link--active' : ''
               }
             >
               Home
@@ -52,11 +58,7 @@ export default function Index() {
             <NavLink
               to="/about"
               className={({isActive, isPending}) =>
-                isPending
-                  ? 'top-bar-nav-link-pending'
-                  : isActive
-                    ? 'top-bar-nav-link-active'
-                    : ''
+                isPending ? 'link--pending' : isActive ? 'link--active' : ''
               }
             >
               About
@@ -65,11 +67,7 @@ export default function Index() {
             <NavLink
               to="/work"
               className={({isActive, isPending}) =>
-                isPending
-                  ? 'top-bar-nav-link-pending'
-                  : isActive
-                    ? 'top-bar-nav-link-active'
-                    : ''
+                isPending ? 'link--pending' : isActive ? 'link--active' : ''
               }
             >
               Work
@@ -78,10 +76,10 @@ export default function Index() {
         </nav>
       </header>
       <main>
-        <section></section>
+        <section>Content here!</section>
       </main>
       <footer>
-        <p>Designed and built by Laura Griffee using Remix, Open Props</p>
+        <p>Designed and built by Laura Griffee</p>
       </footer>
     </>
   );
