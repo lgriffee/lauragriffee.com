@@ -1,13 +1,22 @@
 import {NavLink} from '@remix-run/react';
+import {useState} from 'react';
 
-import {GriffeeLogo, Menu01} from './icons';
+import {GriffeeLogo, Menu01, XClose} from './icons';
 
 export default function TopBarNav() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function handleMenuClick() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return (
     <header>
-      <div className="backdrop">
-        <nav className="menu"></nav>
-      </div>
+      {isMenuOpen ? (
+        <div className="backdrop">
+          <nav className="menu"></nav>
+        </div>
+      ) : null}
 
       <nav className="top-bar-nav">
         <div className="brand">
@@ -18,9 +27,13 @@ export default function TopBarNav() {
             Laura Griffee
           </NavLink>
         </div>
-        <button className="menu_button">
+        <button className="menu_button" onClick={handleMenuClick}>
           <div>
-            <Menu01 className="menu_icon" />
+            {isMenuOpen ? (
+              <XClose className="menu_icon" />
+            ) : (
+              <Menu01 className="menu_icon" />
+            )}
           </div>
         </button>
         <div className="links">
