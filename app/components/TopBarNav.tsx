@@ -1,23 +1,41 @@
 import {NavLink} from '@remix-run/react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 import {GriffeeLogo, Menu01, XClose} from './icons';
 
 export default function TopBarNav() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   function handleMenuClick() {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMobileNavOpen(!isMobileNavOpen);
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMobileNavOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <header>
-      {isMenuOpen ? (
-        <div className="backdrop">
-          <nav className="menu"></nav>
-        </div>
-      ) : null}
-
+      <div
+        className={
+          isMobileNavOpen
+            ? 'mobile-nav_backdrop--active'
+            : 'mobile-nav_backdrop'
+        }
+      >
+        <nav
+          className={
+            isMobileNavOpen ? 'mobile-nav_drawer--active' : 'mobile-nav_drawer'
+          }
+        ></nav>
+      </div>
       <nav className="top-bar-nav">
         <div className="brand">
           <NavLink to="/">
@@ -27,12 +45,12 @@ export default function TopBarNav() {
             Laura Griffee
           </NavLink>
         </div>
-        <button className="menu_button" onClick={handleMenuClick}>
+        <button className="mobile-nav_toggle" onClick={handleMenuClick}>
           <div>
-            {isMenuOpen ? (
-              <XClose className="menu_icon" />
+            {isMobileNavOpen ? (
+              <XClose className="mobile-nav_icon" />
             ) : (
-              <Menu01 className="menu_icon" />
+              <Menu01 className="mobile-nav_icon" />
             )}
           </div>
         </button>

@@ -57,7 +57,7 @@ header {
   color: var(--text-1);
 }
 
-.menu_button {
+.mobile-nav_toggle {
   padding: 12px;
   background-color: var(--surface-1);
   border: none;
@@ -69,16 +69,21 @@ header {
   }
 }
 
-.menu_button:hover {
+.mobile-nav_toggle:hover {
   background-color: var(--surface-2);
 }
 
-.menu_icon {
+.mobile-nav_icon {
   width: auto;
   height: 24px;
 }
 
-.menu {
+.mobile-nav_drawer {
+  display: none;
+
+}
+
+.mobile-nav_drawer--active {
   position: fixed;
   top: 56px;
   right: 0;
@@ -89,9 +94,17 @@ header {
   flex: 1 0 auto;
   background-color: var(--surface-2);
   z-index: var(--layer-2);
+
+  @media (--md-n-above) {
+    display: none;
+  }
 }
 
-.backdrop {
+.mobile-nav_backdrop {
+  display: none;
+}
+
+.mobile-nav_backdrop--active {
   position: fixed;
   top: 56px;
   left: 0;
@@ -99,6 +112,10 @@ header {
   right: 0;
   z-index: var(--layer-1);
   background-color: rgba(0, 0, 0, 0.5);
+
+  @media (--md-n-above) {
+    display: none;
+  }
 }
 
 .links {
